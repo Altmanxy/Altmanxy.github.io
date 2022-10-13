@@ -91,32 +91,64 @@
 <li>安装完成后可以通过以下命令查询安装是否成功<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git version</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></li>
 <li>git配置ssh<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#设置Git的user name和email：</span><br><span class="line">git config --global user.name &#x27;用户名&#x27;</span><br><span class="line">git config --global user.email &#x27;邮箱&#x27;</span><br><span class="line">#生成 SSH KEY</span><br><span class="line">ssh-keygen -t rsa -C “邮箱”</span><br><span class="line">cat id_rsa.pub  #获取ssh</span><br></pre></td></tr></table></figure>
 
-<img src="https://upload-images.jianshu.io/upload_images/18655771-1bd8b08053bb5b4e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="GitHub添加ssh"><blockquote>
+<img src="/2022/10/13/GitHub-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/1.png" class title="配置ssh">
+<blockquote>
 <p>测试配置是否成功</p>
 </blockquote>
 </li>
 </ol>
-<p>ssh -T <a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;</a><br><img src="https://upload-images.jianshu.io/upload_images/18655771-b8555d14af7e0ab8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br>5. 安装hexo</p>
+<p>ssh -T <a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;">&#103;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#46;&#x63;&#x6f;&#109;</a></p>
+<blockquote>
+<img src="/2022/10/13/GitHub-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/2.png" class title="配置成功">
+<ol start="5">
+<li>安装hexo</li>
+</ol>
+</blockquote>
 <ul>
 <li>在本地新建一个空文件夹存放博客，然后在该文件夹右键”GIT bash here”<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli   #安装hexo</span><br><span class="line">npm install hexo-deployer-git --save    #安装hexo部署到git page的deployer</span><br><span class="line">hexo init    #进行初始化在本地生成Hexo相关目录</span><br><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure></li>
 </ul>
-<ol start="5">
+<ol start="6">
 <li>创建GitHub仓库</li>
 </ol>
 <ul>
-<li>在这里我没有像教程上新建的仓库，而是直接fork了别人的仓库，然后把名字再改成自己的名字<br><a target="_blank" rel="noopener" href="https://github.com/kitian616/jekyll-TeXt-theme">fork对象</a></li>
-<li>fork仓库后自己的仓库中会自动创建该仓库，只需要将名字改成符合要求的即可<br><img src="https://upload-images.jianshu.io/upload_images/18655771-185a138a304f5d85.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><strong>名字格式必须为username.github.io</strong></li>
-<li><strong>重点的一步</strong>，我在这一步折腾了两天才发现，教程全部是创建完仓库后点setting，然后改主题保存就会自动生成站点，但不知道GitHub页面是不是改版了，我到处找都找不到这个choose a theme按钮，搜索也没找到想要的结果。后来才发现貌似不需要选择主题，点击setting后点page，等几分钟之后就会自动生成site，复制到浏览器打开，能打开就说明成功了。<br><img src="https://upload-images.jianshu.io/upload_images/18655771-38d4ce0e630402bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></li>
+<li><p>在这里我没有像教程上新建的仓库，而是直接fork了别人的仓库，然后把名字再改成自己的名字<br><a target="_blank" rel="noopener" href="https://github.com/kitian616/jekyll-TeXt-theme">fork对象</a></p>
+</li>
+<li><p>fork仓库后自己的仓库中会自动创建该仓库，只需要将名字改成符合要求的即可</p>
+   <img src="/2022/10/13/GitHub-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/3.png" class title="改名">
+
+<p><strong>名字格式必须为username.github.io</strong></p>
+</li>
+<li><p><strong>重点的一步</strong>，我在这一步折腾了两天才发现，教程全部是创建完仓库后点setting，然后改主题保存就会自动生成站点，但不知道GitHub页面是不是改版了，我到处找都找不到这个choose a theme按钮，搜索也没找到想要的结果。后来才发现貌似不需要选择主题，点击setting后点page，等几分钟之后就会自动生成site，复制到浏览器打开，能打开就说明成功了。</p>
+<img src="/2022/10/13/GitHub-hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/4.png" class title="生成site"></li>
 </ul>
-<ol start="6">
-<li>选择hexo主题<br><a target="_blank" rel="noopener" href="https://hexo.io/themes/">hexo主题</a>:点蓝色字体复制GitHub地址，在Git中clone下来，安装主题时需要阅读主题中的readme文件，按步骤操作即可</li>
-<li>修改hexo根目录的_config.yml文件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">url: https://altmanxy.github.io/ #填写自己Gitee Page的网站地址</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">## theme: landscape</span><br><span class="line">theme: hexo-theme-pure-master #填写自己的样式文件夹的名字</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:altmanxy/altmanxy.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></li>
-<li>宠物插件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-helper-live2d</span><br><span class="line">npm install live2d-widget-model-hijiki</span><br></pre></td></tr></table></figure></li>
+<ol start="7">
+<li><p>选择hexo主题<br><a target="_blank" rel="noopener" href="https://hexo.io/themes/">hexo主题</a>:点蓝色字体复制GitHub地址，在Git中clone下来，安装主题时需要阅读主题中的readme文件，按步骤操作即可</p>
+</li>
+<li><p>修改hexo根目录的_config.yml文件</p>
+</li>
 </ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">url: https://altmanxy.github.io/ #填写自己Gitee Page的网站地址</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">## theme: landscape</span><br><span class="line">theme: hexo-theme-pure-master #填写自己的样式文件夹的名字</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:altmanxy/altmanxy.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>宠物插件</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-helper-live2d</span><br><span class="line">npm install live2d-widget-model-hijiki</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>配置_config.yml，找到deploy，添加以下代码<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#控制宠物样式和状态</span><br><span class="line">live2d:</span><br><span class="line">enable: true</span><br><span class="line">scriptFrom: local</span><br><span class="line">pluginRootPath: live2dw/ # 插件在站点上的根目录(相对路径)</span><br><span class="line">pluginJsPath: lib/ # 脚本文件相对与插件根目录路径</span><br><span class="line">pluginModelPath: assets/ # 模型文件相对与插件根目录路径</span><br><span class="line">tagMode: false # 标签模式, 是否仅替换 live2dtag标签而非插入到所有页面中</span><br><span class="line">log: false </span><br><span class="line">model:</span><br><span class="line">  use: live2d-widget-model-hijiki</span><br><span class="line">display:</span><br><span class="line">  position: right</span><br><span class="line">  width: 150</span><br><span class="line">  height: 300</span><br><span class="line">mobile:</span><br><span class="line">  show: true # 是否在移动设备上显示</span><br><span class="line">react:</span><br><span class="line">  opacity: 0.7</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="10">
+<li>博客文章显示图片<ul>
+<li>配置_config.yml，<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder:false改为true</span><br><span class="line">npm install https://github.com/7ym0n/hexo-asset-image --save</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>插入图片时用这种方式：</li>
 </ul>
 
 
