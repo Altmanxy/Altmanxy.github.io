@@ -82,21 +82,18 @@
                         <p>三者择一，世界在手</p>
 <span id="more"></span>
 
-<p>####1. 购买VPS</p>
-<blockquote>
+<h3 id="1-购买VPS"><a href="#1-购买VPS" class="headerlink" title="1. 购买VPS"></a>1. 购买VPS</h3><blockquote>
 <ul>
 <li>购买海外<a target="_blank" rel="noopener" href="https://www.vultr.com/">vps</a></li>
 <li>自行注册登录</li>
 <li>选择服务器配置（建议系统选Debian11），部署服务器</li>
 <li>拿到服务器IP，先ping一下是否正常，不正常部署新的</li>
 </ul>
-<p>####2. 连接服务器</p>
-<ul>
+</blockquote>
+<h3 id="2-连接服务器"><a href="#2-连接服务器" class="headerlink" title="2. 连接服务器"></a>2. 连接服务器</h3><ul>
 <li>可选xshell、crt工具进行连接</li>
 </ul>
-</blockquote>
-<p>####3. SSR一键脚本</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh&amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br></pre></td></tr></table></figure>
+<h3 id="3-SSR一键脚本"><a href="#3-SSR一键脚本" class="headerlink" title="3. SSR一键脚本"></a>3. SSR一键脚本</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh&amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>安装可直接全部默认，一直回车即可</li>
@@ -109,7 +106,7 @@
 <img src="/2022/10/14/ssr-v2-tro%E4%B9%8B%E6%89%93%E5%BC%80%E4%B8%96%E7%95%8C%E7%9A%84%E5%A4%A7%E9%97%A8/1.png" class title="查询BBR"></li>
 <li>如果使用SSR无法连接网络，则可能是centOS未开放相关端口，接下来查询并开启端口<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-ports</span><br><span class="line">firewall-cmd --zone=public --add-port=2333/tcp --permanent</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
 
-####4. V2ray一键脚本</li>
+<h3 id="4-V2ray一键脚本"><a href="#4-V2ray一键脚本" class="headerlink" title="4. V2ray一键脚本"></a>4. V2ray一键脚本</h3></li>
 <li>安装时间同步组件ntp<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install ntp #CentOS/Fedora</span><br><span class="line">apt install ntp -y #Debian/Ubuntu</span><br></pre></td></tr></table></figure></li>
 <li>V2Ray 一键安装脚本 &amp; 管理脚本 By 233v2.com<blockquote>
 <ul>
@@ -127,8 +124,7 @@
 <li>搭建脚本完成后，输入“v2ray url”可生成 vmess URL 链接将生成的 Vmess URL 添加到 V2Ray 客户端无法直接进行科学上网，需要手动放行服务器端口<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">查看已放行的端口：firewall-cmd --list-ports</span><br><span class="line">放行服务器端口：firewall-cmd --zone=public --add-port=1688/tcp --permanent</span><br><span class="line">关闭服务器端口：firewall-cmd --zone=public --remove-port=1688/tcp --permanent</span><br><span class="line">重启防火墙：firewall-cmd --reload</span><br></pre></td></tr></table></figure></li>
 <li>常用V2命令：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">v2ray info 查看 V2Ray 配置信息</span><br><span class="line">v2ray config 修改 V2Ray 配置</span><br><span class="line">v2ray link 生成 V2Ray 配置文件链接</span><br><span class="line">v2ray infolink 生成 V2Ray 配置信息链接</span><br><span class="line">v2ray qr 生成 V2Ray 配置二维码链接</span><br><span class="line">v2ray ss 修改 Shadowsocks 配置</span><br><span class="line">v2ray ssinfo 查看 Shadowsocks 配置信息</span><br><span class="line">v2ray ssqr 生成 Shadowsocks 配置二维码链接</span><br><span class="line">v2ray status 查看 V2Ray 运行状态</span><br><span class="line">v2ray start 启动 V2Ray</span><br><span class="line">v2ray stop 停止 V2Ray</span><br><span class="line">v2ray restart 重启 V2Ray</span><br><span class="line">v2ray log 查看 V2Ray 运行日志</span><br><span class="line">v2ray update 更新 V2Ray</span><br><span class="line">v2ray update.sh 更新 V2Ray 管理脚本</span><br><span class="line">v2ray uninstall 卸载 V2Ray</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>####5. Trojan一键脚本</p>
-<ul>
+<h3 id="5-Trojan一键脚本"><a href="#5-Trojan一键脚本" class="headerlink" title="5. Trojan一键脚本"></a>5. Trojan一键脚本</h3><ul>
 <li>Trojan搭建流程稍有不同，因为它多了一个搭建伪装网站的步骤。</li>
 <li>由于涉及到伪装网站的搭建，以及SSL证书的申请，需要提前购买一个域名，指向VPS服务器IP地址。<br>购买域名时，可以考虑国外的Namesilo或Godaddy。</li>
 <li>Trojan一键安装脚本：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://raw.githubusercontent.com/xxxbrian/trojan.sh/main/trojan.sh &amp;&amp; chmod +x trojan.sh &amp;&amp; ./trojan.sh</span><br></pre></td></tr></table></figure>
@@ -222,7 +218,7 @@
 
     <aside id="article-toc" role="navigation" class="fixed">
         <div id="article-toc-inner">
-            
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%B4%AD%E4%B9%B0VPS"><span class="toc-text">1. 购买VPS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">2. 连接服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-SSR%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC"><span class="toc-text">3. SSR一键脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-V2ray%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC"><span class="toc-text">4. V2ray一键脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Trojan%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC"><span class="toc-text">5. Trojan一键脚本</span></a></li></ol>
         </div>
     </aside>
 
