@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="用良知驾驭我们之所学，而不以所学蒙蔽了良知">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="altman">
+    
+
+    <!-- Title -->
+    
+    <title>宝塔+青龙+JD库 | booker</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//cdn.jsdelivr.net/npm/bootstrap@3.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Custom Fonts -->
+    <link href="//cdn.jsdelivr.net/npm/font-awesome@4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Noto+Serif:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- jQuery -->
+    <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="//cdn.jsdelivr.net/npm/bootstrap@3.3.6/dist/js/bootstrap.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="booker" type="application/atom+xml">
+</head>
+
+
+<body>
+
+    <!-- Content -->
+    <section class="article-container">
+    <!-- Back Home -->
+    <a class="nav-back" href="/">
+    <i class="fa fa-puzzle-piece"></i>
+</a>
+
+        <!-- Page Header -->
+        <header class="intro-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="post-heading">
+                            <h1>
+                                宝塔+青龙+JD库
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Post Content -->
+        <article>
+            <div class="container">
+                <div class="row">
+                    <!-- Post Main Content -->
+                    <div class="post-content col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <p>薅羊毛第一名</p>
+<span id="more"></span>
+
+<h3 id="1-服务器"><a href="#1-服务器" class="headerlink" title="1. 服务器"></a>1. 服务器</h3><ol>
+<li>所有操作的前提都是先有一个服务器，没有的可以看前面文章自行获取服务器</li>
+<li>服务器系统兼容性推荐：Centos7.x &gt; Debian10 &gt; Ubuntu 20.04 &gt; Centos8 stream &gt; Ubuntu 18.04 &gt; 其它系统</li>
+<li>使用SSH连接工具连接服务器后，就可以进行安装宝塔面板了。</li>
+</ol>
+<h3 id="2-安装宝塔面板"><a href="#2-安装宝塔面板" class="headerlink" title="2. 安装宝塔面板"></a>2. 安装宝塔面板</h3><ol>
+<li><p><a target="_blank" rel="noopener" href="https://www.bt.cn/new/index.html">宝塔官网</a></p>
+</li>
+<li><p>安装前要保证服务器为纯净服务器，没有安装过任何环境与项目，如果安装了其他项目，安装宝塔后可能会有冲突</p>
+</li>
+<li><p>根据服务器系统选择安装的命令</p>
+</li>
+<li><p>安装完成后，打开提示的网站，登录即可</p>
+   <img src="/2022/10/18/%E5%AE%9D%E5%A1%94-%E9%9D%92%E9%BE%99-JD%E5%BA%93/1.png" class title="安装完成"></li>
+<li><p>宝塔卸载命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#完全卸载整个面板及环境</span><br><span class="line">wget http://download.bt.cn/install/bt-uninstall.sh</span><br><span class="line">sh bt-uninstall.sh</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="3-安装青龙面板"><a href="#3-安装青龙面板" class="headerlink" title="3. 安装青龙面板"></a>3. 安装青龙面板</h3><ol>
+<li><p>安装宝塔后，需要安装一个docker容器，可以在宝塔后台直接搜索安装，也可以命令行安装。</p>
+   <img src="/2022/10/18/%E5%AE%9D%E5%A1%94-%E9%9D%92%E9%BE%99-JD%E5%BA%93/2.png" class title="搜索安装Docker">
+
+<hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove docker \</span><br><span class="line">            docker-engine \</span><br><span class="line">            docker.io            #卸载旧版本docker</span><br><span class="line">               </span><br><span class="line">apt-get update  #更新apt包索引</span><br><span class="line"></span><br><span class="line">sudo apt-get install \</span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    gnupg2 \</span><br><span class="line">    software-properties-common   #安装apt依赖包，用于通过HTTPS获取仓库</span><br><span class="line"></span><br><span class="line">curl -fsSL https://mirrors.ustc.edu.cn/docker-ce/linux/debian/gpg | sudo apt-key add -    #添加Docker的官方GPG密钥</span><br><span class="line"></span><br><span class="line">sudo apt-key fingerprint 0EBFCD88  #0EBF CD88 通过搜索指纹的后8个字符，验证您现在是否拥有带有指纹的密钥。</span><br><span class="line"></span><br><span class="line">sudo add-apt-repository \</span><br><span class="line">   &quot;deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/debian \</span><br><span class="line">  $(lsb_release -cs) \</span><br><span class="line">  stable&quot;       #使用指令设置稳定版仓库</span><br><span class="line">  </span><br><span class="line">  apt-get update  #更新apt包索引</span><br><span class="line">  </span><br><span class="line">  sudo apt-get install docker-ce docker-ce-cli containerd.io  #安装最新版本的 Docker Engine-Community 和 containerd</span><br></pre></td></tr></table></figure>
+
+<pre><code>    &#123;% asset_img 3.png 测试Docker是否安装成功 %&#125;
+</code></pre>
+</li>
+<li><p>Docker常用命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br><span class="line">systemctl stop docker</span><br><span class="line">systemctl restart docker</span><br><span class="line">systemctl enable docker   #docker设置随服务器启动而自启动</span><br><span class="line">systemctl status docker</span><br><span class="line">docker images   #查看自己服务器docker镜像列表</span><br><span class="line">docker search 镜像  #搜索自己服务器的镜像</span><br><span class="line">docker pull 镜像:tag(tag可不加,不加默认最新版，加了指定版本) #拉取镜像</span><br><span class="line">docker run 镜像 #运行镜像</span><br><span class="line">docker ps  #查看运行的镜像</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://hub.docker.com/search?q=&type=image">docker镜像版本搜索</a></p>
+</li>
+<li><p>拉取青龙镜像&#x2F;更新</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull whyour/qinglong:latest</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动青龙</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run -dit \</span><br><span class="line">   -v $PWD/ql/config:/ql/config \</span><br><span class="line">   -v $PWD/ql/log:/ql/log \</span><br><span class="line">   -v $PWD/ql/db:/ql/db \</span><br><span class="line">   -p 5700:5700 \</span><br><span class="line">   --name qinglong \</span><br><span class="line">   --hostname qinglong \</span><br><span class="line">   --restart always \</span><br><span class="line">   whyour/qinglong:latest</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>到宝塔面板放行青龙端口5700</p>
+ <img src="/2022/10/18/%E5%AE%9D%E5%A1%94-%E9%9D%92%E9%BE%99-JD%E5%BA%93/4.png" class title="放行端口"></li>
+<li><p>登录青龙面板(<a href="http://ip+:5700)，账号：admin">http://ip+:5700)，账号：admin</a> 密码：adminadmin</p>
+</li>
+<li><p>登录后会初始化密码，需要自行查看</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it qinglong cat /ql/config/auth.json</span><br></pre></td></tr></table></figure>
+
+<pre><code> &#123;% asset_img 5.png 查看密码 %&#125;
+</code></pre>
+</li>
+<li><p>添加JD定时任务库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ql repo https://github.com/KingRan/KR.git &quot;jd_|jx_|jdCookie&quot; &quot;activity|backUp&quot; &quot;^jd[^_]|USER|utils|function|sign|sendNotify|ql|JDJR&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JD定时规则：</p>
+<blockquote>
+<p>秒 分 时 天 月 周<br>各个单位之间分别以空格分割，建议设置为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">30 * * * * *</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>抓取ck码</p>
+<blockquote>
+<p>浏览器打开手机版京东<a target="_blank" rel="noopener" href="https://m.jd.com/">m.jd.com</a>登录，F12打开调试，选择“网络”，登录后选择”log.git”，找到 pt_key和 pt_pin两个变量的值，将他们记录下来</p>
+<img src="/2022/10/18/%E5%AE%9D%E5%A1%94-%E9%9D%92%E9%BE%99-JD%E5%BA%93/6.png" class title="抓取码">
+</blockquote>
+</li>
+<li><p>配置环境变量</p>
+<blockquote>
+<p>在面板的右上角看到环境变量这个选项，点击增加。在弹出的窗口中输入变量，名称为 JD_COOKIE ，值就是刚刚获取的 pt_key和 pt_pin两个变量，注意别搞反了（分号不可少）。</p>
+<img src="/2022/10/18/%E5%AE%9D%E5%A1%94-%E9%9D%92%E9%BE%99-JD%E5%BA%93/7.png" class title="配置环境变量">
+</blockquote>
+</li>
+<li><p>设置推送，建议使用电报推送</p>
+<blockquote>
+<p>填写自己申请@BotFather的Token：export TG_BOT_TOKEN&#x3D;”523******:AAFbQ***********************QNdA”</p>
+<p>填写 @getuseridbot 中获取到的纯数字ID：export TG_USER_ID&#x3D;”14********7”</p>
+<p>以上内容都在配置文件中设置</p>
+<img src="/2022/10/18/%E5%AE%9D%E5%A1%94-%E9%9D%92%E9%BE%99-JD%E5%BA%93/8.png" class title="设置推送">
+</blockquote>
+</li>
+<li><p>设置完成后手动运行定时任务库，看到以下内容说明运行成功，以后会按设定的时间自动运行</p>
+<img src="/2022/10/18/%E5%AE%9D%E5%A1%94-%E9%9D%92%E9%BE%99-JD%E5%BA%93/9.png" class title="运行任务"></li>
+</ol>
+<h3 id="4-参考文献"><a href="#4-参考文献" class="headerlink" title="4. 参考文献"></a>4. 参考文献</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://www.runoob.com/docker/debian-docker-install.html">Debian Docker 安装</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_51607907/article/details/124155185">青龙面板【修改端口+修改密码】</a></li>
+<li><a target="_blank" rel="noopener" href="https://chenyan98.cn/2930.html">搭建青龙面板</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.feiji.work/2021/411.html">青龙信息推送</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_35424400/article/details/119279520">最详细的宝塔青龙面板搭建教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39221949/article/details/124183815">树莓派 青龙面板的安装（超详细）</a></li>
+</ol>
+
+
+                            <!-- Meta -->
+                            <div class="post-meta">
+                                <hr>
+                                <br>
+                                <div class="post-tags">
+                                    
+                                                
+
+<a href="/categories/个人使用/">个人使用</a>
+
+                                                    
+                                </div>
+                                <div class="post-date">
+                                    
+                                        2022-10-18
+                                    
+                                </div>
+                            </div>
+                    </div>
+
+                    <!-- Comments -->
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <!-- Disqus Comments -->
+
+
+                    </div>
+                </div>
+            </div>
+        </article>
+</section>
+
+<!-- Image viewer-->
+
+    <!-- Custom picture view-->
+    <link href="/css/viewer.min.css" rel="stylesheet" />
+    <script
+      src="/js/viewer.min.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    
+    <script type="text/javascript">
+      // set image viewer
+      Viewer.setDefaults({
+        zoomRatio: [0.5],
+        navbar: false,
+        toolbar: false,
+        button: false,
+        title: [2, (image, imageData) => `${image.alt}`],
+        show: function() {
+          this.viewer.zoomTo(0.5);
+        }
+      });
+      var imageList = document.getElementsByTagName("img");
+      Array.prototype.forEach.call(imageList, element => {
+        var viewer = new Viewer(element);
+      });
+    </script>
+
+    
+
+<!-- TOC -->
+
+    <aside id="article-toc" role="navigation" class="fixed">
+        <div id="article-toc-inner">
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">1. 服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF"><span class="toc-text">2. 安装宝塔面板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85%E9%9D%92%E9%BE%99%E9%9D%A2%E6%9D%BF"><span class="toc-text">3. 安装青龙面板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-text">4. 参考文献</span></a></li></ol>
+        </div>
+    </aside>
+
+    <!-- Scripts -->
+    <script type="text/javascript">
+    console.log("© zchen9 🙋 2015-" + new Date().getFullYear());
+</script>
+  
+    <!-- Google Analytics -->
+    
+
+    <!-- Service Worker -->
+    <!-- if using service worker -->
+
+    
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+
+</html>
