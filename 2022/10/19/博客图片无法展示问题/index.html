@@ -82,15 +82,17 @@
                         <p>没有图片的内容是没有灵魂的。</p>
 <span id="more"></span>
 
-<h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><pre><code>最近写博客，直接用MD插入图片、在简书上直接复制粘贴图片，发布后在网站上打开看的时候，发现图片都展示不出来。随后搜索了一下，发现大家提出的方案都是相同的，试着用他们的方法操作了一下，发现还是显示不了图片。后来有人说去看一下官方文档，官方文档那边确实给出了解决方法，根据官方文档+其他人操作，又是折腾了一番才搞好。
-</code></pre>
-<blockquote>
+<h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><ul>
+<li>最近写博客，直接用MD插入图片、在简书上直接复制粘贴图片，发布后在网站上打开看的时候，发现图片都展示不出来。随后搜索了一下，发现大家提出的方案都是相同的，试着用他们的方法操作了一下，发现还是显示不了图片。后来有人说去看一下官方文档，官方文档那边确实给出了解决方法，根据官方文档+其他人操作，又是折腾了一番才搞好。</li>
+<li><blockquote>
 <p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs">官方文档</a></p>
 </blockquote>
+</li>
+</ul>
 <h3 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2. 解决方法"></a>2. 解决方法</h3><ol>
 <li><p>前提：hexo版本要大于3.0</p>
 </li>
-<li><p>修改根目录下的配置文件”_config.yml”，把**&#x3D;&#x3D;<u>post_asset_folder:false改为true</u>&#x3D;&#x3D;**，这样一来，当你new一个新文件时同时会生成一个与文件同名的文件夹，只需要把用到的图片放在文件夹内</p>
+<li><p>修改根目录下的配置文件”_config.yml”，把<u>post_asset_folder:false改为true</u>，这样一来，当你new一个新文件时同时会生成一个与文件同名的文件夹，只需要把用到的图片放在文件夹内</p>
 <img src="/2022/10/19/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E5%B1%95%E7%A4%BA%E9%97%AE%E9%A2%98/3.png" class title="修改配置">
 
 <img src="/2022/10/19/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E5%B1%95%E7%A4%BA%E9%97%AE%E9%A2%98/1.png" class title="同名文件夹">
